@@ -29,12 +29,12 @@
       </div>
     </div>
 
-	<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
 
     <main class="container">
+    <div n:foreach="$flashes as $flash" n:class="alert, $flash->type">{$flash->message}</div>
       <div class="row">
-        <div class="content">
-		      {include content}
+        <div class="col-md-12">
+          {include content}
         </div>
       </div>
     </main>

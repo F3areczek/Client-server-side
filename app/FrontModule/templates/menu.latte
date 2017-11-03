@@ -9,7 +9,7 @@
           <ul class="navbar-nav mr-auto">
             {include 'menu_items.latte'}
           </ul>
-
+          {if !$user->isLoggedIn()}
           {* LOGIN *}
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
@@ -18,23 +18,26 @@
                   <li>
                     <div class="row">
                         <div class="col-md-12">
-                          <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                          {form signForm}
                               <div class="form-group">
                                 <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                {input email}
                               </div>
                               <div class="form-group">
                                 <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                {input password}
                                 <div class="help-block text-right">
-                                  <a href="">Registrace</a> |
+                                  <a href="{link Sign:Register}">Registrace</a> |
                                   <a href="">Zapomenuté heslo ?</a>
                                 </div>
                               </div>
                               <div class="form-group">
-                                <button type="submit" class="btn btn-primary btn-block">Přihlásit</button>
+                                {input submit}
                               </div>
-                          </form>
+                          {/form}
+                          
+                            
+                          
                         </div>
                     </div>
                     </li>
@@ -42,7 +45,9 @@
               </li>
           </ul>
           {* LOGIN END*}
-
+        {else}
+          <a class="login" n:href="LogOut!">Odhlásit</a>
+        {/if}
         </div>
 
     </div>

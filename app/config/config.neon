@@ -13,3 +13,5 @@ session:
 
 services:
 	router: App\RouterFactory::createRouter
+	authenticator: Authenticator
+	UserModel: User
