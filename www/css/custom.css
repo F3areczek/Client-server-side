@@ -1,0 +1,99 @@
+html, body{ 
+    overflow-x: hidden; 
+    height: 100%;
+}
+
+body {
+    background: url('/img/page/header.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.head {
+    color:#fff;
+    font-weight:800;
+    font-size:21pt;
+    padding:50px;
+    text-align:center;
+    text-shadow: 1px 1px 6px rgba(145, 150, 150, 1);
+}
+
+.logo {
+    color:#fff;
+    font-size:21pt;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align:center;
+    text-shadow: 1px 1px 6px rgba(145, 150, 150, 1);
+}
+
+main.container{
+    background-color: white;
+    border: 0.5px solid #343a40;
+    padding: 20px 40px; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+a.active{
+    color: #fff !important;
+    font-weight: bold;
+    text-shadow: 1px 1px 6px rgba(145, 150, 150, 1);
+}
+
+.login:link, .login:visited, .login:hover, .login:active {
+    color: white;
+}
+
+#login-dp{
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(255,255,255,.8);
+}
+#login-dp .help-block{
+    font-size:12px    
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+#login-dp .social-buttons{
+    margin:12px 0    
+}
+#login-dp .social-buttons a{
+    width: 49%;
+}
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+.btn-fb{
+    color: #fff;
+    background-color:#3b5998;
+}
+.btn-fb:hover{
+    color: #fff;
+    background-color:#496ebc 
+}
+.btn-tw{
+    color: #fff;
+    background-color:#55acee;
+}
+.btn-tw:hover{
+    color: #fff;
+    background-color:#59b5fa;
+}
+@media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+}
