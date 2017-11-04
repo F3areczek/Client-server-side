@@ -3,6 +3,7 @@ parameters:
 
 application:
 	errorPresenter: Error
+#	catchExceptions: true
 	mapping:
 		*: App\*Module\Presenters\*Presenter
 
@@ -11,10 +12,10 @@ session:
 	expiration: 14 days
 
 
-#database:
-#	dsn: 'mysql:host=localhost;dbname=ete32e_1718zs_09'
-#	user: 'ete32e_1718zs_09'
-#	password: 'pxuQE5'
+database:
+	dsn: 'mysql:host=localhost;dbname=ete32e_1718zs_09'
+	user: 'ete32e_1718zs_09'
+	password: 'pxuQE5'
 
 
 services:
