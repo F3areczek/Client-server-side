@@ -60,7 +60,7 @@ class SignPresenter extends BasePresenter
 
         $new_user_id = $this->userModel->register($values);
         if($new_user_id){
-            $this->flashMessage('Registrace se zdařila, jo!');
+            $this->flashMessage('Registrace se zdařila', 'alert-success');
             $this->redirect('Homepage:default');
         }
     }
