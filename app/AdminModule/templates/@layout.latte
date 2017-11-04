@@ -23,8 +23,8 @@
         display:none
     }
     </style>
-
-	{/block}
+    {/block}
+    <script src="{$basePath}/ckeditor/ckeditor.js"></script>
   </head>
 
   <body>
@@ -37,11 +37,11 @@
 
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item {$presenter->isLinkCurrent('User:*') ? active}">
               <a class="nav-link" href="{link User:default}">Uživatelé</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Settings</a>
+            <li class="nav-item {$presenter->isLinkCurrent('Flower:*') ? active}">
+              <a class="nav-link" href="{link Flower:default}">Pivoňky</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Profile</a>

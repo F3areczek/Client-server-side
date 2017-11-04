@@ -28,6 +28,7 @@ class RouterFactory
         $frontRouter[] = new Route('zebricek','Homepage:ladder');
         $frontRouter[] = new Route('encyclopedie','Homepage:encyclopedia');
         $frontRouter[] = new Route('o-projektu','Homepage:about');
+        $frontRouter[] = new Route('pridat-pivonku','Homepage:newFlower');
         $frontRouter[] = new Route('registrace','Sign:register');
         $frontRouter[] = new Route('<presenter>/<action>[/<id>]', array(
             'presenter' => 'Homepage',

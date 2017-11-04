@@ -16,6 +16,14 @@
     <link href="{$basePath}/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	{/block}
 
+  {block scripts}		
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="{$basePath}/js/popper.min.js"></script>
+		<script src="{$basePath}/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{$basePath}/ckeditor/ckeditor.js"></script>
+    <script src="https://nette.github.io/resources/js/netteForms.min.js"></script>
+	{/block}
+
   </head>
 
   <body>
@@ -42,13 +50,6 @@
     <footer id="myFooter" class="container">
       {include 'footer.latte'}
     </footer>
-
-	{block scripts}
-		<script src="https://nette.github.io/resources/js/netteForms.min.js"></script>
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-		<script src="{$basePath}/js/popper.min.js"></script>
-		<script src="{$basePath}/bootstrap/js/bootstrap.min.js"></script>
-	{/block}
   </body>
 </html>
 

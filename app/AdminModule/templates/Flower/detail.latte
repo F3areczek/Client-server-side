@@ -1,0 +1,21 @@
+{block content}
+<style>
+    td{
+        padding: 5px;
+        width: 100%;
+    }
+</style>
+
+<h1>Úprava pivoňek</h1>
+<div class="table-responsive">
+    <div class="col-md-8">
+        {control editFlowerForm}
+    </div>
+    <div class="col-md-4">
+        <img src="{$basePath}/{$flower->file}" width="400px"/>
+    </div>
+</div>
+
+<script>
+    CKEDITOR.replace( 'frm-editFlowerForm-description' );
+</script>

@@ -3,6 +3,7 @@
 abstract class Repository extends Nette\Object {
 
     const USER_TABLE = "users";
+    const FLOWER_TABLE = "flowers";
 
     /** @var Nette\Database\Context */
     protected $connection;
