@@ -1,0 +1,45 @@
+{
+  "name": "ublaboo-datagrid",
+  "homepage": "https://github.com/ublaboo/datagrid",
+  "authors": [
+    "Pavel Janda <me@paveljanda.com>"
+  ],
+  "description": "Assets for php package ublaboo/datagrid",
+  "main": [
+    "./assets/dist/datagrid.js",
+    "./assets/dist/datagrid.css"
+  ],
+  "keywords": [
+    "datagrid",
+    "ublaboo"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "/src",
+    "composer.json",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">= 1.11.0 <3.0",
+    "happy": ">= 1.0.0",
+    "bootstrap-datepicker": ">= 1.6.0",
+    "nette-forms": "^2.3",
+    "nette.ajax.js": ">= 2.1.0",
+    "jquery-ui-sortable": "https://github.com/ryantbrown/jquery-ui-sortable.git",
+    "bootstrap": ">= 3.3.0"
+  },
+  "version": "5.4.7",
+  "_release": "5.4.7",
+  "_resolution": {
+    "type": "version",
+    "tag": "v5.4.7",
+    "commit": "9df00380802069703a0a0027a920e56736988518"
+  },
+  "_source": "https://github.com/ublaboo/datagrid.git",
+  "_target": "^5.4.7",
+  "_originalSource": "ublaboo-datagrid",
+  "_direct": true
+}

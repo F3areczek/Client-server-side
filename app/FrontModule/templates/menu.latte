@@ -46,7 +46,11 @@
           </ul>
           {* LOGIN END*}
         {else}
-          <a class="login" n:href="LogOut!">Odhlásit</a>
+          <a class="login" n:href="LogOut!">Odhlásit </a>
+          {if $user->roles[0] == "admin"}
+            <font color="white">&nbsp;|&nbsp;</font>
+            <a class="login" href="/admin"> Administrace</a>
+          {/if}
         {/if}
         </div>
 

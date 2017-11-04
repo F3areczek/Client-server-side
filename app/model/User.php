@@ -22,4 +22,18 @@ class User extends Repository{
         else
             return false;
     }
+
+    public function getUsers() {
+        return $this->connection->table(self::USER_TABLE)->fetchAll();
+    }
+
+    public function updateRole($iduser, $role){
+        $this->connection->table(self::USER_TABLE)->where("id", $iduser)->update(array("role" => $role));
+    }
+
+    public function updateUser($iduser, $valuse){
+        $this->connection->table(self::USER_TABLE)->where("id", $iduser)->update($valuse);
+    }
+
+
 }
