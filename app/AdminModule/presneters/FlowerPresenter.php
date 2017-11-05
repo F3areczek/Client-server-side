@@ -28,9 +28,9 @@ class FlowerPresenter extends BasePresenter
 
         $grid->setDataSource($this->flowerModel->getFlowers());
         $grid->addColumnText('file', 'Obrázek')
-             ->setTemplate(__DIR__ . '\..\templates\Flower\gridImage.latte');
+             ->setTemplate('/srv/kitlab.pef.czu.cz/groups/1718zs/ete32e/09/app/AdminModule/templates/Flower/gridImage.latte');
         $grid->addColumnText('description', 'Popisek')
-             ->setTemplate(__DIR__ . '\..\templates\Flower\gridDescription.latte');
+             ->setTemplate('/srv/kitlab.pef.czu.cz/groups/1718zs/ete32e/09/app/AdminModule/templates/Flower/gridDescription.latte');
         $grid->addColumnText('name', 'Název')->setSortable();
         $grid->addColumnText('author', 'Autor')->setSortable();
         $grid->addColumnText('accepted', 'Schváleno')

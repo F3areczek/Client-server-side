@@ -4,7 +4,7 @@ html, body{
 }
 
 body {
-    background: url('/img/page/header.jpg') no-repeat center center fixed;
+    background: url('http://kitlab.pef.czu.cz/1718zs/ete32e/09/img/page/header.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
