@@ -26,16 +26,23 @@ class HomepagePresenter extends BasePresenter
         }
     }
 
-    public function renderEncyclopedia(){
+    public function renderEncyclopedia($id){
         $this->template->flowers = $this->flowerModel->getActiveFlowers();
-        $this->template->selectedFlower = $this->selectedFlower;
         if ($this->selectedFlower != null){
             $this->evaluation = $this->flowerModel->getMyRating($this->user->id, $this->selectedFlower->id);
-        } else{            
-            $this->template->selectedFlower = $this->flowerModel->getActiveFlowers()[0];
+        } else{ 
+            if ($id)
+                $this->selectedFlower = $this->flowerModel->getFlower($id); 
+            else        
+                $this->selectedFlower = $this->flowerModel->getActiveFlowers()[0];
         }
         $this->template->evaluation = $this->evaluation;
+        $this->template->selectedFlower = $this->selectedFlower;
 
+    }
+
+    public function renderLadder(){
+        $this->template->flowers = $this->flowerModel->getActiveRatedFlowers();
     }
 
     public function handleSelectFlower($id){

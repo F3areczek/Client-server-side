@@ -12,6 +12,10 @@ class Flower extends Repository{
         return $this->connection->query("SELECT ".self::FLOWER_TABLE.".*, ".self::USER_TABLE .".name as 'author' FROM `flowers` JOIN users ON users.id = flowers.users_id WHERE ".self::FLOWER_TABLE.".accepted = 1 ORDER BY ".self::FLOWER_TABLE.".name")->fetchAll();
     }
 
+    public function getActiveRatedFlowers() {
+        return $this->connection->query("SELECT ".self::FLOWER_TABLE.".*, ROUND((SUM(".self::EVALUATION_TABLE.".value)/COUNT(".self::EVALUATION_TABLE.".value)),2) as 'score' FROM `".self::FLOWER_TABLE."` JOIN ".self::EVALUATION_TABLE." ON ".self::EVALUATION_TABLE.".idflower = ".self::FLOWER_TABLE.".id WHERE ".self::FLOWER_TABLE.".accepted = 1 GROUP BY ".self::EVALUATION_TABLE.".idflower ORDER BY ROUND((SUM(".self::EVALUATION_TABLE.".value)/COUNT(".self::EVALUATION_TABLE.".value)),2) DESC")->fetchAll();
+    }
+
     public function updateFlower($id, $valuse){
         $this->connection->table(self::FLOWER_TABLE)->where("id", $id)->update($valuse);
     }

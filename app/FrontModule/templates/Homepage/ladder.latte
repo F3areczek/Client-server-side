@@ -1,7 +1,30 @@
 {block content}
 <h1>Žebříček</h1>
-<p>Ad veniam laboris cillum veniam cupidatat irure Lorem adipisicing sit. Quis et mollit consectetur duis quis enim cillum. Quis labore aliquip occaecat proident est proident. Adipisicing est fugiat sit ut ea eiusmod aute excepteur. Quis reprehenderit do dolor ex non anim ea laborum voluptate duis aute cupidatat ut. Adipisicing quis irure laboris amet ad in ea velit excepteur nulla. Laboris sint voluptate amet ea reprehenderit laboris reprehenderit anim aliquip.</p>
-<p>Consequat laborum anim aliquip qui adipisicing et veniam consequat velit anim fugiat elit deserunt eiusmod. Officia ullamco ut eu elit Lorem anim aute fugiat et. Ullamco consectetur qui Lorem dolore pariatur ut officia ex. Aliqua culpa ad qui sunt aute est non.</p>
-<p>Enim deserunt sint consequat fugiat consequat consequat laborum adipisicing consequat mollit. Commodo fugiat non eu enim mollit. Pariatur ex adipisicing mollit eiusmod enim sit labore aliqua aliquip. Proident adipisicing exercitation cillum tempor pariatur et ullamco non nisi anim.</p>
-<p>Adipisicing tempor magna elit est adipisicing voluptate dolor. Adipisicing minim irure amet exercitation duis minim consequat dolor enim labore sint non. Consequat quis consectetur incididunt anim aute occaecat quis laborum. Dolor consectetur ullamco laborum est eiusmod non amet occaecat cupidatat consequat ex aliqua. Reprehenderit ad cillum cupidatat labore laborum voluptate quis velit elit non. Irure adipisicing veniam duis nisi officia duis sit eiusmod. Excepteur sint id consectetur nisi est in aliquip laboris et ullamco reprehenderit.</p>
-<p>Dolor elit sunt quis ut laborum qui laborum. Sit nisi sit cillum velit. Commodo officia aliquip ut mollit deserunt. Deserunt anim commodo non est laboris irure mollit irure officia non non minim aliqua consequat.
+<div class="row">   
+    <div class="col-md-12">
+    <br>
+       <table class="table">
+            <thead>
+                <tr>
+                    <th width="70%">Název</th>
+                    <th>Hodnocení</th>
+                    <th>Encyklopedie</th>
+                </tr>
+            </thead>
+            <tbody>
+            {foreach $flowers as $flower}
+                <tr>
+                    <td>
+                    {if $iterator->counter <= 3 }
+                        <img src="{$basePath}/img/page/thropy/{$iterator->counter}.png" height="16px"/>
+                    {/if}
+                        {$flower->name}
+                    </td>
+                    <td>{$flower->score}</td>
+                    <td><a href="{link Homepage:Encyclopedia $flower->id}">Detail</a></td>
+                </tr>
+            {/foreach}
+            </tbody>
+        </table>
+    </div>
+</div>
