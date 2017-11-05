@@ -30,7 +30,7 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="{link Homepage:default}">Administrace</a>
+        <a class="navbar-brand" href="{link Flower:default}">Administrace</a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -42,12 +42,6 @@
             </li>
             <li class="nav-item {$presenter->isLinkCurrent('Flower:*') ? active}">
               <a class="nav-link" href="{link Flower:default}">Pivoňky</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Profile</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Help</a>
             </li>
           </ul>
           <ul class="navbar-nav mr-auto pull-right">
@@ -72,30 +66,30 @@
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 		<script src="{$basePath}/js/popper.min.js"></script>
 		<script src="{$basePath}/bootstrap/js/bootstrap.min.js"></script>
-        <script src="{$basePath}/bower_components/jquery/dist/jquery.js"></script>
-        <script src="{$basePath}/bower_components/nette-forms/src/assets/netteForms.js"></script>
-        <script src="{$basePath}/bower_components/nette.ajax.js/nette.ajax.js"></script>
+    <script src="{$basePath}/bower_components/jquery/dist/jquery.js"></script>
+    <script src="{$basePath}/bower_components/nette-forms/src/assets/netteForms.js"></script>
+    <script src="{$basePath}/bower_components/nette.ajax.js/nette.ajax.js"></script>
 
-        <!-- Use this tiny js for that pretty checkboxes (https://github.com/paveljanda/happy) -->
-        <script src="{$basePath}/bower_components/happy/dist/happy.js"></script>
-        <script src="{$basePath}/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
-        <script src="{$basePath}/bower_components/jquery-ui-sortable/jquery-ui-sortable.js"></script>
-        <script src="{$basePath}/bower_components/ublaboo-datagrid/assets/dist/datagrid.js"></script>
+    <!-- Use this tiny js for that pretty checkboxes (https://github.com/paveljanda/happy) -->
+    <script src="{$basePath}/bower_components/happy/dist/happy.js"></script>
+    <script src="{$basePath}/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+    <script src="{$basePath}/bower_components/jquery-ui-sortable/jquery-ui-sortable.js"></script>
+    <script src="{$basePath}/bower_components/ublaboo-datagrid/assets/dist/datagrid.js"></script>
 
-        <!-- It is recommended to include this JS file with just a few bits. It refreshes URL on non ajax request -->
-        <script src="{$basePath}/bower_components/ublaboo-datagrid/assets/dist/datagrid-instant-url-refresh.js"></script>
+    <!-- It is recommended to include this JS file with just a few bits. It refreshes URL on non ajax request -->
+    <script src="{$basePath}/bower_components/ublaboo-datagrid/assets/dist/datagrid-instant-url-refresh.js"></script>
 
-        <!-- Use this little extension for ajax spinners -->
-        <script src="{$basePath}/bower_components/ublaboo-datagrid/assets/dist/datagrid-spinners.js"></script>
+    <!-- Use this little extension for ajax spinners -->
+    <script src="{$basePath}/bower_components/ublaboo-datagrid/assets/dist/datagrid-spinners.js"></script>
 
-        <!-- Include bootstrap.js for proper behaviour of ColumnStatus -->
-        <script src="{$basePath}/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- Include bootstrap.js for proper behaviour of ColumnStatus -->
+    <script src="{$basePath}/bower_components/bootstrap/dist/js/bootstrap.js"></script>
 
-        <!-- Include bootstrap-select.js when using FilterMultiSelect (silviomoreto.github.io/bootstrap-select) -->
-        <script src="{$basePath}/bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
-        <script>
-            $.nette.init();
-        </script>
+    <!-- Include bootstrap-select.js when using FilterMultiSelect (silviomoreto.github.io/bootstrap-select) -->
+    <script src="{$basePath}/bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
+    <script>
+        $.nette.init();
+    </script>
 	{/block}
   </body>
 </html>

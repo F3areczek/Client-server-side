@@ -12,6 +12,8 @@ class HomepagePresenter extends BasePresenter
 {
 
     private $flowerModel;
+    public $selectedFlower;
+    public $evaluation;
     
     function __construct(\Flower $flowerModel) {
         $this->flowerModel = $flowerModel;
@@ -21,6 +23,33 @@ class HomepagePresenter extends BasePresenter
         if (!$this->user->isLoggedIn()){
             $this->flashMessage('Přidávat pivoňky můžou jen přihlášení uživatelé.', 'alert-danger');
             $this->redirect('Homepage:default');
+        }
+    }
+
+    public function renderEncyclopedia(){
+        $this->template->flowers = $this->flowerModel->getActiveFlowers();
+        $this->template->selectedFlower = $this->selectedFlower;
+        if ($this->selectedFlower != null){
+            $this->evaluation = $this->flowerModel->getMyRating($this->user->id, $this->selectedFlower->id);
+        } else{            
+            $this->template->selectedFlower = $this->flowerModel->getActiveFlowers()[0];
+        }
+        $this->template->evaluation = $this->evaluation;
+
+    }
+
+    public function handleSelectFlower($id){
+        $this->selectedFlower = $this->flowerModel->getFlower($id);
+        if ($this->isAjax()) {
+            $this->redrawControl('ajaxFlowers');
+        }
+    }
+
+    public function handleRateFlower($id, $rate){
+        $this->selectedFlower = $this->flowerModel->getFlower($id);
+        $this->flowerModel->rateFlower($id, $this->user->id, $rate);
+        if ($this->isAjax()) {
+            $this->redrawControl('ajaxFlowers');
         }
     }
 

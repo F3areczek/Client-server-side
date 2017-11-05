@@ -1,0 +1,26 @@
+{
+  "name": "flip",
+  "version": "1.1.2",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "~2.0"
+  },
+  "devDependencies": {
+    "jquery": "~2.0"
+  },
+  "main": [
+    "dist/jquery.flip.js"
+  ],
+  "ignore": [],
+  "homepage": "https://github.com/nnattawat/flip",
+  "_release": "1.1.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.1.2",
+    "commit": "e5155d6e29b349205216846822eac8fe9b6426d0"
+  },
+  "_source": "https://github.com/nnattawat/flip.git",
+  "_target": "^1.1.2",
+  "_originalSource": "flip",
+  "_direct": true
+}

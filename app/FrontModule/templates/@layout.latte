@@ -21,7 +21,6 @@
 		<script src="{$basePath}/js/popper.min.js"></script>
 		<script src="{$basePath}/bootstrap/js/bootstrap.min.js"></script>
     <script src="{$basePath}/ckeditor/ckeditor.js"></script>
-    <script src="https://nette.github.io/resources/js/netteForms.min.js"></script>
 	{/block}
 
   </head>
@@ -50,6 +49,16 @@
     <footer id="myFooter" class="container">
       {include 'footer.latte'}
     </footer>
+
+
+    <script src="{$basePath}/bower_components/jquery/dist/jquery.js"></script>
+    <script src="{$basePath}/bower_components/nette-forms/src/assets/netteForms.js"></script>
+    <script src="{$basePath}/bower_components/nette.ajax.js/nette.ajax.js"></script>
+    <script src="{$basePath}/bower_components/flip/src/flip.js"></script>
+    <script>
+        $.nette.init();
+    </script>
+
   </body>
 </html>
 
