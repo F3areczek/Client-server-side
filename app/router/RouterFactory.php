@@ -30,6 +30,12 @@ class RouterFactory
         $frontRouter[] = new Route('o-projektu','Homepage:about');
         $frontRouter[] = new Route('pridat-pivonku','Homepage:newFlower');
         $frontRouter[] = new Route('registrace','Sign:register');
+        // Ab testování
+        $frontRouter[] = new Route('ab/index.html','Homepage:testovaniIndex');
+        $frontRouter[] = new Route('ab/a.html','Homepage:testovaniA');
+        $frontRouter[] = new Route('ab/b.html','Homepage:testovaniB');
+
+
         $frontRouter[] = new Route('<presenter>/<action>[/<id>]', array(
             'presenter' => 'Homepage',
             'action' => 'default',
