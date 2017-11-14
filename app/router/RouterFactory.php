@@ -32,6 +32,8 @@ class RouterFactory
         $frontRouter[] = new Route('registrace','Sign:register');
         // Ab testování
         $frontRouter[] = new Route('ab/index.html','Homepage:testovaniIndex');
+        $frontRouter[] = new Route('ab/index.php','Homepage:testovaniIndex');
+        $frontRouter[] = new Route('ab/','Homepage:testovaniIndex');
         $frontRouter[] = new Route('ab/a.html','Homepage:testovaniA');
         $frontRouter[] = new Route('ab/b.html','Homepage:testovaniB');
 
