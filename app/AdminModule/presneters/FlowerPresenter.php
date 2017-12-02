@@ -49,6 +49,16 @@ class FlowerPresenter extends BasePresenter
             return $item->accepted == 0;
         });
 
+        $grid->addAction('disapprove', 'Odschválit', 'activeFlowerFalse!')
+        ->setTitle('Odschválit')
+        ->setClass('btn btn-xs btn-warning ajax')
+        ->setConfirm('Opravdu chcete odschválit tuto pivoňku?');
+
+        $grid->allowRowsAction('disapprove', function($item) {
+            return $item->accepted == 1;
+        });
+
+
         $grid->addAction('detail', '', 'detail')
             ->setIcon('sun-o')
             ->setTitle('Detail');
@@ -57,6 +67,12 @@ class FlowerPresenter extends BasePresenter
     public function handleActiveFlower($id){
         $this->flowerModel->updateFlower($id, array("accepted" => 1));
         $this->flashMessage('Květina byla schválena', 'success');
+        $this->redirect('this');
+    }
+
+    public function handleActiveFlowerFalse($id){
+        $this->flowerModel->updateFlower($id, array("accepted" => 0));
+        $this->flashMessage('Květina byla odschválena', 'success');
         $this->redirect('this');
     }
 
