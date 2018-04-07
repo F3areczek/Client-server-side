@@ -29,7 +29,7 @@ abstract class Repository extends Nette\Object {
         $flowers = $this->connection->table("flowers")->select("*")->where("accepted", 1)->fetchAll();
 
         // Create XML tag with version and encoding
-        $xml = new DOMDocument(1, "UTF-8");
+        $xml = new DOMDocument('1.0', "UTF-8");
         $xml->formatOutput = true;
         $xml->preserveWhiteSpace = true;
 
