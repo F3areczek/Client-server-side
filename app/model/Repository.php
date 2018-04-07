@@ -6,7 +6,7 @@ abstract class Repository extends Nette\Object {
     const FLOWER_TABLE = "flowers";
     const EVALUATION_TABLE = "evaluation";
 
-    private $baseUri = "http://localhost/"; // dle hostingu
+    public $baseUri = "http://localhost/"; // dle hostingu
 
     /** @var Nette\Database\Context */
     protected $connection;
