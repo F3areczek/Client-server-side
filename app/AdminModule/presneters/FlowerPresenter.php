@@ -66,12 +66,14 @@ class FlowerPresenter extends BasePresenter
 
     public function handleActiveFlower($id){
         $this->flowerModel->updateFlower($id, array("accepted" => 1));
+        $this->flowerModel->createSitemap();
         $this->flashMessage('Květina byla schválena', 'success');
         $this->redirect('this');
     }
 
     public function handleActiveFlowerFalse($id){
         $this->flowerModel->updateFlower($id, array("accepted" => 0));
+        $this->flowerModel->createSitemap();
         $this->flashMessage('Květina byla odschválena', 'success');
         $this->redirect('this');
     }
